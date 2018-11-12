@@ -9,7 +9,7 @@
 				<!-- adapts webpage to screen/browser size changes -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title><!-- insert title here --></title>
+		<title>week 14:v-for directive practice</title>
 
 		<!-- insert boilerplate code  and links below -->
 
@@ -32,27 +32,23 @@
 <!-- START BODY ELEMENT -->
 	<body>
 
-		<div id="todo">
-			<p>{{ newTask }}</p>
-			<section>
-				<input 
-					type="text" 
-					placeholder="What do you need to do?"
-					v-model='newTask'
-					v-on:keyup.enter='addTask'
+		<div id="app">
+			<div
+				v-for="puppy in puppies"
+				>
+				
+				<h1>{{ puppy.name }}</h1>
+				<img 
+					v-bind:src="puppy.image"
+					v-bind:alt="puppy.name + ', ' + puppy.breed"
 					>
-			</section>
-
-			<ul>
-				<li v-for='task in todoList'>
-					<label>{{ task }}</label>
-					<button 
-						type="button"
-						v-on:click="removeTask(task)">
-						X
-					</button>
-				</li>
-			</ul>
+				<h2>BREED: {{ puppy.breed }}</h2>
+				<h2>GENDER: {{ puppy.gender }}</h2>
+				<h2>AGE: {{ Math.round(puppy.age * 12) }} months</h2>
+				<h2>WEIGHT: {{ Math.round(puppy.weightKG * 2.2) }} pounds</h2>
+				<br>
+				<br>
+			</div>
 
 		</div>
 
@@ -64,16 +60,17 @@
 
 
 
+
 <!-- SCRIPTS -->
-<!-- Vue JS CDN script -->
+	<!-- Vue JS CDN script -->
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-<!-- jQuery slim 3.3.1 script -->
+	<!-- jQuery slim 3.3.1 script -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<!-- jQuery Popper scritp -->
+	<!-- jQuery Popper scritp -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<!-- Bootstrap script -->
+	<!-- Bootstrap script -->
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<!-- custom JS script -->
+	<!-- custom JS script -->
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>

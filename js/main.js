@@ -1,71 +1,69 @@
 console.log("connected");
 
-var todo = new Vue({ 
-	el: '#todo', 
-	data: { 
-		newTask: '', 
-		todoList: []
-	}, 
-
-	methods: 
-		{ 
-		addTask: function() {
-			var task = this.newTask;
-			this.todoList.push(task);
-			this.newTask = "";
-		},
-		removeTask: function(task){
-			var index = this.todoList.indexOf(task);
-			this.todoList.splice(index, 1);
-		}
-		// },
-		// checkedTask: function() {
-		// 	var checked = this.item;
-		// 	this.todoList.strike(checked);
-		// }
-	} 
-});
 
 
+new Vue({
+	el: '#app',
+	data: {
+		puppies: [
+			{
+				name: 'Lily',
+				gender: 'female',
+				age: 0.7,
+				breed: 'Italian Greyhound',
+				weightKG: 7,
+				image: 'https://www.petlandnovi.com/wp-content/uploads/2018/02/1053771_800.jpg'
+			},
+			{
+				name: 'Barney',
+				gender: 'male',
+				age: 0.9,
+				breed: 'Beagle',
+				weightKG: 8.5,
+				image: 'https://liveforexploration.com/wp-content/uploads/2018/07/Elegant-Beagle-Puppies-For-Sale-89-on-Home-Design-Furniture-Decorating-with-Beagle-Puppies-For-Sale.jpg',
+				special: 'Mute'
+			},
+			{
+				name: 'NouMi',
+				gender: 'female',
+				age: 0.4,
+				breed: 'Pomeranian',
+				weightKG: 4,
+				image: 'https://dingo.care2.com/pictures/causes/3148/3147680.large.jpg'
+			},
+			{
+				name: 'En Geronde',
+				gender: 'male',
+				age: 0.4,
+				breed: 'French Bulldog',
+				weightKG: 5.25,
+				image: 'http://bulldog-puppies.com/wp-content/uploads/2018/09/french-bulldog-583x400.jpg',
+				special: 'Prone to ear infections'
+			},
+			{
+				name: 'Pepper',
+				gender: 'male',
+				age: 0.5,
+				breed: 'Scottish Terrier',
+				weightKG: 7,
+				image: 'https://www.selectadogbreed.com/media/1812/scottishterrier_puppy.jpg'
+			},
+			{
+				name: 'Rollo',
+				gender: 'male',
+				age: 0.5,
+				breed: 'Pitbull',
+				weightKG: 9,
+				image: 'https://images-na.ssl-images-amazon.com/images/I/41TkelcoyyL.jpg'
+			}
+		]
+	},
 
+	methods: {
 
-
-// Try adding a clear all button, which clears the list of all todos.
-
-// Try adding a checkbox to each to-do which, when checked, causes the to-do to become crossed out.
-
-// Try making a to-do which has already been added editable when clicked on.
-
-
-// new Vue({
-// 	el: '#app',
-// 	data: {
-// 		message: 'what is up?',
-// 		coolness: 'hey',
-// 		num:  50,
-// 		bool: false,
-// 		list: [
-// 			{
-// 				name: 'Bob',
-// 				age: 21
-// 			},
-// 			{
-// 				name: 'Joe',
-// 				age: 23	
-// 			},
-// 			{
-// 				name: 'Sue',
-// 				age: 19
-// 			}
-// 		]
-// 	},
-
-// 	methods: {
-// 		reverseMessage: function() {
-// 			this.message = this.message.split('').reverse().join('')
-// 		}
-// 	}
-// })
+		
+	}
+})
 
 
 
